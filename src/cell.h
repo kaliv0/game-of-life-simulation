@@ -6,16 +6,16 @@
 #include "constants.h"
 
 class Cell {
-  bool alive;
+  bool _alive;
 
 public:
-  Cell() : alive(false) {}
-  // Draw Cell on Generation
-  void draw(int row, int col) const;
-  // Bring Cell to life
-  void create();
+  Cell() : _alive(false) {}
 
-  bool is_alive() const;
+  void draw(int row, int col) const;
+
+  void create() { _alive = true; }
+
+  bool isAlive() const { return _alive; }
 };
 
 #endif // CELL_H

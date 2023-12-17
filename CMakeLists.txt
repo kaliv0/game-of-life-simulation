@@ -1,14 +1,14 @@
 cmake_minimum_required(VERSION 3.27)
-project(conways_game_of_life_practical)
+project(game_of_life_simulation)
 
 set(CMAKE_CXX_STANDARD 14)
 
 include_directories(src)
 
-add_executable(conways_game_of_life_practical
-        src/Cell.cpp
-        src/Cell.h
-        src/Generation.cpp
-        src/Generation.h
+add_executable(game_of_life_simulation
+        src/cell.cpp
+        src/cell.h
         src/constants.h
+        src/generation.cpp
+        src/generation.h
         src/main.cpp)

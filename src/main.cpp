@@ -1,15 +1,16 @@
-#include "Generation.h"
+#include "generation.h"
 #include <thread>
 
 int main() {
   Generation current_generation;
-  current_generation.populate_randomly();
+  current_generation.populateRandomly();
 
   while (true) {
     current_generation.display();
-    std::this_thread::sleep_for(std::chrono::milliseconds(GENERATION_AGE));
+    std::this_thread::sleep_for(
+        std::chrono::milliseconds(constants::generation_age));
     Generation next_generation;
-    calculate_next_generation(current_generation, next_generation);
-    current_generation.update_to_next_generation(next_generation);
+    calculateNextGeneration(current_generation, next_generation);
+    current_generation.updateToNextGeneration(next_generation);
   }
 }
