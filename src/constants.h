@@ -16,8 +16,8 @@ const std::string hide_cursor{"\x1b[?25l"};
 const std::string green_color{"\x1b[32m"};
 
 // Standard ANSI console
- const int max_row = 24;
- const int max_col = 80;
+const int max_row = 24;
+const int max_col = 80;
 
 // Re-adjusted for bigger screen
 //const int max_row = 54;
